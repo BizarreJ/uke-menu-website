@@ -1,0 +1,75 @@
+name: Speiseplan aktualisieren und veröffentlichen
+
+on:
+  schedule:
+    # Werktags 05:17 UTC (06:17 MEZ / 07:17 MESZ).
+    - cron: "17 5 * * 1-5"
+  push:
+    branches: [main]
+    paths:
+      - "download_latest_pdf.py"
+      - "uke_speiseplan.py"
+      - "index.html"
+      - "styles.css"
+      - "app.js"
+      - "manifest.webmanifest"
+      - "service-worker.js"
+      - "requirements.txt"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Aktuellen UKE-Speiseplan laden
+        run: python download_latest_pdf.py -o _work/speiseplan.pdf
+
+      - name: PDF auslesen
+        run: python uke_speiseplan.py _work/speiseplan.pdf -o data/speiseplan.json
+
+      - name: Webseite zusammenstellen
+        run: |
+          mkdir -p _site/data
+          cp index.html styles.css app.js manifest.webmanifest service-worker.js _site/
+          cp data/speiseplan.json _site/data/
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v5
+
+      - name: Seitenpaket hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4
