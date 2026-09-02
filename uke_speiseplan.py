@@ -126,7 +126,7 @@ def clean_cell(text: str) -> dict[str, object]:
         "preis_intern_eur": float(price_matches[0].group(1).replace(",", ".")),
         "preis_extern_eur": float(price_matches[1].group(1).replace(",", ".")),
         "allergene": allergens,
-        "yazio_text": f"{food}. Portion laut UKE-Kantine ca. {kcal_match.group(1)} kcal.",
+        "yazio_text": f"{food}. Portion laut UKE-Casino ca. {kcal_match.group(1)} kcal.",
     }
 
 

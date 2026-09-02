@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#064f8c">
+    <meta name="description" content="Aktueller Speiseplan des UKE-Casinos">
+    <title>UKE Menü</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">UKE Casino</p>
+        <h1>Was gibt es heute?</h1>
+      </div>
+      <p id="week-range" class="week-range" aria-live="polite"></p>
+    </header>
+
+    <main>
+      <nav id="day-picker" class="day-picker" aria-label="Wochentag auswählen"></nav>
+
+      <section id="menu-list" class="menu-list" aria-live="polite">
+        <p class="state-message">Speiseplan wird geladen …</p>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <template id="menu-card-template">
+      <article class="menu-card">
+        <div class="card-topline">
+          <span class="menu-name"></span>
+          <span class="diet-badge"></span>
+        </div>
+        <h2 class="dish-name"></h2>
+        <p class="description"></p>
+        <div class="facts">
+          <strong class="calories"></strong>
+          <span class="protein-types"></span>
+        </div>
+        <div class="portion-row">
+          <span class="portion-label">Portion</span>
+          <div class="portion-picker" role="group" aria-label="Portionsgröße">
+            <button type="button" data-portion="0.5">½</button>
+            <button type="button" data-portion="1" class="active">1</button>
+            <button type="button" data-portion="1.5">1½</button>
+          </div>
+        </div>
+        <button type="button" class="copy-button">Für YAZIO kopieren</button>
+      </article>
+    </template>
+  </body>
+</html>

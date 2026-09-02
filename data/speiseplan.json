@@ -1,0 +1,492 @@
+{
+  "quelle": "2026-kw-36.3.pdf",
+  "zeitraum_von": "2026-08-31",
+  "zeitraum_bis": "2026-09-04",
+  "tage": {
+    "2026-08-31": {
+      "wochentag": "Montag",
+      "gerichte": [
+        {
+          "gericht": "Gemüse - BIO Reis Pfanne",
+          "beschreibung": "Gemüse - BIO Reis Pfanne / Rote Zwiebeln / Zucchini / Bunte Paprika / Möhren aus dem Alten Land / Kohlrabi / Champignon / Frühlauch / Kidneybohnen / Tomate / Basilikum",
+          "kcal": 590,
+          "preis_intern_eur": 5.12,
+          "preis_extern_eur": 6.91,
+          "allergene": [],
+          "yazio_text": "Gemüse - BIO Reis Pfanne / Rote Zwiebeln / Zucchini / Bunte Paprika / Möhren aus dem Alten Land / Kohlrabi / Champignon / Frühlauch / Kidneybohnen / Tomate / Basilikum. Portion laut UKE-Casino ca. 590 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegan"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 1"
+        },
+        {
+          "gericht": "Bunter Sommersalat",
+          "beschreibung": "Bunter Sommersalat / Crispy Nuggets / Mango - Chilidressing / BIO Kichererbsen / Indisches Naan Brot",
+          "kcal": 785,
+          "preis_intern_eur": 5.05,
+          "preis_extern_eur": 6.82,
+          "allergene": [
+            "A",
+            "J"
+          ],
+          "yazio_text": "Bunter Sommersalat / Crispy Nuggets / Mango - Chilidressing / BIO Kichererbsen / Indisches Naan Brot. Portion laut UKE-Casino ca. 785 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegan"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 2"
+        },
+        {
+          "gericht": "Schnitzel Wiener Art",
+          "beschreibung": "Schnitzel Wiener Art / Rahmsauce / Pommes frites / Erbsen & Karotten",
+          "kcal": 875,
+          "preis_intern_eur": 5.47,
+          "preis_extern_eur": 8.06,
+          "allergene": [
+            "A",
+            "C",
+            "G"
+          ],
+          "yazio_text": "Schnitzel Wiener Art / Rahmsauce / Pommes frites / Erbsen & Karotten. Portion laut UKE-Casino ca. 875 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "geflügel"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 3"
+        },
+        {
+          "gericht": "Gesottener Rindertafelspitz",
+          "beschreibung": "Gesottener Rindertafelspitz / Meerrettichsauce / Bouillon Gemüse mit BIO Kartoffeln",
+          "kcal": 875,
+          "preis_intern_eur": 8.9,
+          "preis_extern_eur": 12.02,
+          "allergene": [
+            "A",
+            "G",
+            "I"
+          ],
+          "yazio_text": "Gesottener Rindertafelspitz / Meerrettichsauce / Bouillon Gemüse mit BIO Kartoffeln. Portion laut UKE-Casino ca. 875 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "rind"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Wok Grill"
+        }
+      ]
+    },
+    "2026-09-01": {
+      "wochentag": "Dienstag",
+      "gerichte": [
+        {
+          "gericht": "Gefüllte Paprikaschote",
+          "beschreibung": "Gefüllte Paprikaschote / pikante Tomatensauce / Gemüse - BIO Reis",
+          "kcal": 880,
+          "preis_intern_eur": 5.12,
+          "preis_extern_eur": 6.91,
+          "allergene": [
+            "A",
+            "F",
+            "G"
+          ],
+          "yazio_text": "Gefüllte Paprikaschote / pikante Tomatensauce / Gemüse - BIO Reis. Portion laut UKE-Casino ca. 880 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "rind",
+            "schwein"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 1"
+        },
+        {
+          "gericht": "Bio Farfalle",
+          "beschreibung": "Bio Farfalle / Tomaten - Gemüseragout / Zucchini / Aubergine / Paprika / Champignon / Rote Zwiebel / gehobelter Grana Padano / mit Basilikum marinierter Mozzarella",
+          "kcal": 810,
+          "preis_intern_eur": 5.05,
+          "preis_extern_eur": 6.82,
+          "allergene": [
+            "A",
+            "G",
+            "H"
+          ],
+          "yazio_text": "Bio Farfalle / Tomaten - Gemüseragout / Zucchini / Aubergine / Paprika / Champignon / Rote Zwiebel / gehobelter Grana Padano / mit Basilikum marinierter Mozzarella. Portion laut UKE-Casino ca. 810 kcal.",
+          "ernaehrungsform": "vegetarisch",
+          "proteintypen": [],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 2"
+        },
+        {
+          "gericht": "Hawaiianische Poké Bowl",
+          "beschreibung": "Hawaiianische Poké Bowl / BIO Quinoa & Cous Cous / No Chicken gröstl / Mango / Reisessig / Möhren / Salatgurke / Radieschen / Frühlauch / Koriander - Ingwercreme",
+          "kcal": 600,
+          "preis_intern_eur": 5.97,
+          "preis_extern_eur": 8.06,
+          "allergene": [
+            "A",
+            "F",
+            "K"
+          ],
+          "yazio_text": "Hawaiianische Poké Bowl / BIO Quinoa & Cous Cous / No Chicken gröstl / Mango / Reisessig / Möhren / Salatgurke / Radieschen / Frühlauch / Koriander - Ingwercreme. Portion laut UKE-Casino ca. 600 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "geflügel"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 3"
+        },
+        {
+          "gericht": "Chicken Thai Curry",
+          "beschreibung": "Chicken Thai Curry / grüner Curry / Zitronengras / Kokosnussmilch / Karotten / Zuckerschoten / Kohl / Edamame / Paprika / Rote Zwiebeln / Pak Choi / BIO € Duftreis / Koriander",
+          "kcal": 785,
+          "preis_intern_eur": 8.2,
+          "preis_extern_eur": 11.07,
+          "allergene": [
+            "F",
+            "K"
+          ],
+          "yazio_text": "Chicken Thai Curry / grüner Curry / Zitronengras / Kokosnussmilch / Karotten / Zuckerschoten / Kohl / Edamame / Paprika / Rote Zwiebeln / Pak Choi / BIO € Duftreis / Koriander. Portion laut UKE-Casino ca. 785 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "geflügel"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Wok Grill"
+        }
+      ]
+    },
+    "2026-09-02": {
+      "wochentag": "Mittwoch",
+      "gerichte": [
+        {
+          "gericht": "Indisches BIO Kichererbsen Curry",
+          "beschreibung": "Indisches BIO Kichererbsen Curry / passierte Tomaten / Kokosnuss / gelber Curry / Kohl / Möhren aus dem Alten Land / BIO Duftreis",
+          "kcal": 600,
+          "preis_intern_eur": 5.12,
+          "preis_extern_eur": 6.91,
+          "allergene": [
+            "F",
+            "J"
+          ],
+          "yazio_text": "Indisches BIO Kichererbsen Curry / passierte Tomaten / Kokosnuss / gelber Curry / Kohl / Möhren aus dem Alten Land / BIO Duftreis. Portion laut UKE-Casino ca. 600 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegan"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 1"
+        },
+        {
+          "gericht": "Allgäuer Spinatknödel",
+          "beschreibung": "Allgäuer Spinatknödel / Schwammerl Gulasch / Karotte / Sellerie / Lauch / BIO Kartoffeln / Tomate / Junger Spinat",
+          "kcal": 830,
+          "preis_intern_eur": 5.05,
+          "preis_extern_eur": 6.82,
+          "allergene": [
+            "A",
+            "C",
+            "G",
+            "I"
+          ],
+          "yazio_text": "Allgäuer Spinatknödel / Schwammerl Gulasch / Karotte / Sellerie / Lauch / BIO Kartoffeln / Tomate / Junger Spinat. Portion laut UKE-Casino ca. 830 kcal.",
+          "ernaehrungsform": "vegetarisch",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegetarisch"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 2"
+        },
+        {
+          "gericht": "Feine Kalbsfrikadelle",
+          "beschreibung": "Feine Kalbsfrikadelle / grüne Pfeffersauce / Püree aus BIO Kartoffeln / gebratenes Karotten - Spitzkohlgemüse",
+          "kcal": 885,
+          "preis_intern_eur": 5.97,
+          "preis_extern_eur": 8.06,
+          "allergene": [
+            "A",
+            "C",
+            "G",
+            "J"
+          ],
+          "yazio_text": "Feine Kalbsfrikadelle / grüne Pfeffersauce / Püree aus BIO Kartoffeln / gebratenes Karotten - Spitzkohlgemüse. Portion laut UKE-Casino ca. 885 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "rind"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 3"
+        },
+        {
+          "gericht": "Vitello Tonnato mal anders",
+          "beschreibung": "Vitello Tonnato mal anders / Kalb / Thunfisch X 2 / Kapern / Zitrone / Ciabatta / Tomatisiertes Püree aus BIO Kartoffeln / Zucchini / Paprika",
+          "kcal": 825,
+          "preis_intern_eur": 9.5,
+          "preis_extern_eur": 12.83,
+          "allergene": [
+            "A",
+            "D",
+            "C",
+            "G"
+          ],
+          "yazio_text": "Vitello Tonnato mal anders / Kalb / Thunfisch X 2 / Kapern / Zitrone / Ciabatta / Tomatisiertes Püree aus BIO Kartoffeln / Zucchini / Paprika. Portion laut UKE-Casino ca. 825 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "fisch",
+            "rind"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Wok Grill"
+        }
+      ]
+    },
+    "2026-09-03": {
+      "wochentag": "Donnerstag",
+      "gerichte": [
+        {
+          "gericht": "Gemüsetortellini",
+          "beschreibung": "Gemüsetortellini / Bolognese Soja statt Hackfleisch / Tomate / Karotten / Sellerie / Lauch / veganer Reibekäse / Rucola",
+          "kcal": 785,
+          "preis_intern_eur": 4.62,
+          "preis_extern_eur": 6.23,
+          "allergene": [
+            "A",
+            "I",
+            "F"
+          ],
+          "yazio_text": "Gemüsetortellini / Bolognese Soja statt Hackfleisch / Tomate / Karotten / Sellerie / Lauch / veganer Reibekäse / Rucola. Portion laut UKE-Casino ca. 785 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegan"
+          ],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 1"
+        },
+        {
+          "gericht": "Dal Makhani \"Punjab\" BIO Linsen x 2",
+          "beschreibung": "Dal Makhani \"Punjab\" BIO Linsen x 2 / Wurzel aus dem Alten Land / Bratenjus / gebratene BIO Kartoffeln / Sauerrahm / Koriander",
+          "kcal": 765,
+          "preis_intern_eur": 5.05,
+          "preis_extern_eur": 6.82,
+          "allergene": [
+            "A",
+            "F",
+            "I"
+          ],
+          "yazio_text": "Dal Makhani \"Punjab\" BIO Linsen x 2 / Wurzel aus dem Alten Land / Bratenjus / gebratene BIO Kartoffeln / Sauerrahm / Koriander. Portion laut UKE-Casino ca. 765 kcal.",
+          "ernaehrungsform": "vegetarisch",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegetarisch"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 2"
+        },
+        {
+          "gericht": "BIO Vollkorn Fusilli Pfanne",
+          "beschreibung": "BIO Vollkorn Fusilli Pfanne / Junger Spinat / Kirschtomaten / Zucchini / Paprika / Rote Zwiebeln / pikante Tomatensauce / Hirtenkäse",
+          "kcal": 600,
+          "preis_intern_eur": 5.97,
+          "preis_extern_eur": 8.06,
+          "allergene": [
+            "A",
+            "G"
+          ],
+          "yazio_text": "BIO Vollkorn Fusilli Pfanne / Junger Spinat / Kirschtomaten / Zucchini / Paprika / Rote Zwiebeln / pikante Tomatensauce / Hirtenkäse. Portion laut UKE-Casino ca. 600 kcal.",
+          "ernaehrungsform": "vegetarisch",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegetarisch"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 3"
+        },
+        {
+          "gericht": "\"Taxi Teller\" 2.0 Der Klassiker aus dem Ruhrpott diesmal Vegan",
+          "beschreibung": "\"Taxi Teller\" 2.0 Der Klassiker aus dem Ruhrpott diesmal Vegan / Currywurst / Gyros / Tzatziki / Krautsalat Pommes frites Mayonnaise",
+          "kcal": 910,
+          "preis_intern_eur": 8.8,
+          "preis_extern_eur": 11.88,
+          "allergene": [
+            "A",
+            "I",
+            "J"
+          ],
+          "yazio_text": "\"Taxi Teller\" 2.0 Der Klassiker aus dem Ruhrpott diesmal Vegan / Currywurst / Gyros / Tzatziki / Krautsalat Pommes frites Mayonnaise. Portion laut UKE-Casino ca. 910 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Wok Grill"
+        }
+      ]
+    },
+    "2026-09-04": {
+      "wochentag": "Freitag",
+      "gerichte": [
+        {
+          "gericht": "Piccata Milanese",
+          "beschreibung": "Piccata Milanese / BIO Spaghetti / fruchtiges Tomatensugo / gehobelter Grana Padano",
+          "kcal": 860,
+          "preis_intern_eur": 5.12,
+          "preis_extern_eur": 6.91,
+          "allergene": [
+            "A",
+            "C",
+            "G",
+            "I"
+          ],
+          "yazio_text": "Piccata Milanese / BIO Spaghetti / fruchtiges Tomatensugo / gehobelter Grana Padano. Portion laut UKE-Casino ca. 860 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "geflügel"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 1"
+        },
+        {
+          "gericht": "Nasi Goren mit BIO Reis",
+          "beschreibung": "Nasi Goren mit BIO Reis / Ei / Rüben / Erbsen / Paprika / Chinakohl / gebackener Tofu Süß - sauer / Ketjap Manissauce",
+          "kcal": 800,
+          "preis_intern_eur": 5.05,
+          "preis_extern_eur": 6.82,
+          "allergene": [
+            "A",
+            "C",
+            "F",
+            "K"
+          ],
+          "yazio_text": "Nasi Goren mit BIO Reis / Ei / Rüben / Erbsen / Paprika / Chinakohl / gebackener Tofu Süß - sauer / Ketjap Manissauce. Portion laut UKE-Casino ca. 800 kcal.",
+          "ernaehrungsform": "vegetarisch",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegetarisch"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 2"
+        },
+        {
+          "gericht": "Chili sin Carne",
+          "beschreibung": "Chili sin Carne / BIO Linsen / schwarze Bohnen / grüne Bohnen / Mais / Paprika / Tomate / BIO Quinoa",
+          "kcal": 580,
+          "preis_intern_eur": 5.97,
+          "preis_extern_eur": 8.06,
+          "allergene": [
+            "I",
+            "F"
+          ],
+          "yazio_text": "Chili sin Carne / BIO Linsen / schwarze Bohnen / grüne Bohnen / Mais / Paprika / Tomate / BIO Quinoa. Portion laut UKE-Casino ca. 580 kcal.",
+          "ernaehrungsform": "vegan",
+          "proteintypen": [],
+          "kennzeichnungen": [
+            "vegan"
+          ],
+          "klassifizierung_quellen": [
+            "symbol"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Menü 3"
+        },
+        {
+          "gericht": "Filet vom Label Rouge Lachs aus dem Rotbuchen Rauch",
+          "beschreibung": "Filet vom Label Rouge Lachs aus dem Rotbuchen Rauch / Meerrettich Sauce / Mangold Gemüse / Schnittlauch Stampf aus BIO Kartoffeln",
+          "kcal": 835,
+          "preis_intern_eur": 9.8,
+          "preis_extern_eur": 13.23,
+          "allergene": [
+            "A",
+            "D",
+            "G"
+          ],
+          "yazio_text": "Filet vom Label Rouge Lachs aus dem Rotbuchen Rauch / Meerrettich Sauce / Mangold Gemüse / Schnittlauch Stampf aus BIO Kartoffeln. Portion laut UKE-Casino ca. 835 kcal.",
+          "ernaehrungsform": "fleisch/fisch",
+          "proteintypen": [
+            "fisch"
+          ],
+          "kennzeichnungen": [],
+          "klassifizierung_quellen": [
+            "symbol",
+            "text"
+          ],
+          "klassifizierung_sicher": true,
+          "menü": "Wok Grill"
+        }
+      ]
+    }
+  }
+}
