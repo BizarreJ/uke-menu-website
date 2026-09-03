@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  --forest: #064f8c;
+  --forest-2: #073b68;
+  --mint: #eaf3fa;
+  --lime: #b9dcf7;
+  --cream: #f3f6f8;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #62707c;
+  --line: #dbe3e9;
+  --shadow: 0 10px 28px rgba(18, 48, 72, .09);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--cream); }
+body { margin: 0; min-width: 320px; min-height: 100vh; color: var(--ink); background: var(--cream); }
+button { font: inherit; }
+
+.topbar { color: white; background: var(--forest); padding: calc(1.4rem + env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) 1.4rem max(1rem, env(safe-area-inset-left)); }
+.topbar-inner, main { width: min(100%, 900px); margin-inline: auto; }
+.topbar-inner { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.overline, .section-label { margin: 0 0 .3rem; color: var(--lime); font-size: .78rem; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(1.75rem, 8vw, 2.7rem); line-height: 1; letter-spacing: -.04em; }
+.week-pill { display: flex; align-items: center; gap: .45rem; color: #dce8e2; font-size: .78rem; white-space: nowrap; }
+.live-dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--lime); }
+
+main { padding: 1rem; }
+.controls { position: sticky; z-index: 5; top: 0; margin: -.1rem -.3rem 0; padding: .65rem .3rem .8rem; background: color-mix(in srgb, var(--cream) 94%, transparent); backdrop-filter: blur(12px); }
+.day-picker { display: grid; grid-template-columns: repeat(5, 1fr); gap: .4rem; }
+.day-button { min-width: 0; min-height: 3.7rem; border: 1px solid var(--line); border-radius: .85rem; color: var(--muted); background: var(--surface); cursor: pointer; }
+.day-button span, .day-button strong { display: block; }
+.day-button span { font-size: .75rem; font-weight: 800; text-transform: uppercase; }
+.day-button strong { margin-top: .15rem; color: var(--ink); font-size: .96rem; }
+.day-button.active { border-color: var(--forest); color: white; background: var(--forest); box-shadow: 0 5px 16px rgba(18, 55, 42, .18); }
+.day-button.active strong { color: white; }
+
+.filter-row { display: flex; gap: .45rem; margin-top: .75rem; overflow-x: auto; scrollbar-width: none; padding-bottom: .1rem; }
+.filter-row::-webkit-scrollbar { display: none; }
+.filter-chip { flex: 0 0 auto; min-height: 2.45rem; border: 1px solid var(--line); border-radius: 999px; padding: .4rem .8rem; color: var(--muted); background: var(--surface); font-size: .85rem; font-weight: 750; cursor: pointer; }
+.filter-chip.active { border-color: var(--forest); color: white; background: var(--forest); }
+
+.menu-section { margin-top: .7rem; }
+.day-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin: 0 .1rem 1rem; }
+.day-heading h2 { margin: 0; font-size: 1.55rem; letter-spacing: -.03em; }
+.date-label { color: var(--muted); font-weight: 750; }
+.menu-grid { display: grid; gap: .8rem; }
+
+.menu-card { border: 1px solid var(--line); border-radius: 1.05rem; padding: 1rem; background: var(--surface); box-shadow: var(--shadow); }
+.card-meta, .nutrition-line { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+.menu-name { color: var(--forest-2); font-size: .76rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.diet-badge { border-radius: 999px; padding: .28rem .62rem; color: #5d6761; background: #eef1ef; font-size: .73rem; font-weight: 800; }
+.diet-badge.vegan, .diet-badge.vegetarisch { color: #176536; background: var(--mint); }
+.menu-card h3 { margin: .7rem 0 .4rem; font-size: 1.18rem; line-height: 1.25; letter-spacing: -.015em; }
+.description { margin: 0; min-height: 2.8em; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+.nutrition-line { margin-top: .85rem; padding-top: .8rem; border-top: 1px solid var(--line); }
+.nutrition-line strong { font-size: 1.08rem; }
+.nutrition-line span { color: var(--muted); font-size: .8rem; text-align: right; }
+.card-actions { align-items: flex-end; margin-top: .9rem; }
+.details-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin: .8rem 0 0; }
+.details-grid > div { min-width: 0; border-radius: .72rem; padding: .62rem .7rem; background: var(--mint); }
+.details-grid .allergen-detail { grid-column: 1 / -1; }
+.details-grid dt { margin: 0 0 .18rem; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
+.details-grid dd { margin: 0; color: var(--forest-2); font-size: .91rem; font-weight: 850; }
+.copy-button { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; width: 2.25rem; height: 2.25rem; margin-left: auto; border: 0; border-radius: 50%; padding: 0; color: white; background: var(--forest); font-weight: 800; cursor: pointer; flex: 0 0 auto; }
+.copy-button svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.state-card { border: 1px dashed #bdc9c1; border-radius: 1rem; padding: 2rem 1rem; color: var(--muted); background: rgba(255,255,255,.5); text-align: center; }
+.copy-button:hover { background: var(--forest-2); }
+.copy-button:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+.state-card.error { color: #9b2c2c; }
+
+.toast { position: fixed; z-index: 20; left: 50%; bottom: calc(1rem + env(safe-area-inset-bottom)); transform: translateX(-50%); width: max-content; max-width: calc(100% - 2rem); border-radius: 999px; padding: .72rem 1rem; color: white; background: #17211c; font-size: .88rem; font-weight: 800; box-shadow: 0 8px 28px rgba(0,0,0,.2); }
+.toast-enter-active, .toast-leave-active { transition: opacity .2s ease, transform .2s ease; }
+.toast-enter-from, .toast-leave-to { opacity: 0; transform: translate(-50%, 1rem); }
+
+@media (min-width: 720px) {
+  .topbar { padding-block: 2rem; }
+  main { padding-top: 1.25rem; }
+  .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .menu-card { padding: 1.1rem; }
+}
+
+@media (max-width: 520px) {
+  .topbar-inner { display: block; }
+  .week-pill { margin-top: .7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}

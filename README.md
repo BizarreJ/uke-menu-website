@@ -1,7 +1,9 @@
 # UKE Menü für GitHub Pages
 
-Die Webseite liest `data/speiseplan.json`, zeigt automatisch den aktuellen Tag
-und kopiert einen an die Portionsgröße angepassten Text für YAZIO.
+Die Vue-3-Webseite liest den aktuellen UKE-Speiseplan, zeigt automatisch den
+passenden Tag, filtert nach Ernährungsform und zeigt kcal, interne und externe
+Preise sowie ausgeschriebene Allergene. Ein Gericht lässt sich als Text für
+YAZIO kopieren.
 
 ## Einmalige Einrichtung
 
@@ -22,7 +24,7 @@ erreichbar:
 
 ## Automatische Aktualisierung
 
-GitHub prüft die offizielle UKE-Seite montags bis freitags morgens automatisch.
+GitHub prüft die offizielle UKE-Seite montags morgens automatisch.
 Das Skript sucht gezielt den Plan der aktuellen ISO-Kalenderwoche, lädt die PDF,
 erzeugt die JSON-Datei und veröffentlicht die Webseite. Du musst keine PDF mehr
 hochladen. Über **Actions → Speiseplan aktualisieren und veröffentlichen → Run
@@ -33,11 +35,12 @@ workflow** kannst du die Prüfung jederzeit manuell auslösen.
 ```bash
 python -m pip install -r requirements.txt
 python download_latest_pdf.py -o input/speiseplan.pdf
-python uke_speiseplan.py input/speiseplan.pdf -o data/speiseplan.json
-python -m http.server 8000
+python uke_speiseplan.py input/speiseplan.pdf -o public/data/speiseplan.json
+npm install
+npm run dev
 ```
 
-Anschließend `http://localhost:8000` im Browser öffnen.
+Anschließend die von Vite angezeigte lokale Adresse im Browser öffnen.
 
 ## Hinweis
 

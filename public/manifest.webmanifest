@@ -1,0 +1,11 @@
+{
+  "name": "UKE Menü",
+  "short_name": "UKE Menü",
+  "description": "Aktueller Speiseplan des UKE-Mitarbeitendenrestaurants",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f8",
+  "theme_color": "#064f8c"
+}
