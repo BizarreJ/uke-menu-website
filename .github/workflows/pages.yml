@@ -2,18 +2,19 @@ name: Speiseplan aktualisieren und veröffentlichen
 
 on:
   schedule:
-    # Werktags 04:17 UTC (05:17 MEZ / 06:17 MESZ).
-    - cron: "17 4 * * 1"
+    # Jeden Montag 05:17 UTC (06:17 MEZ / 07:17 MESZ).
+    - cron: "17 5 * * 1"
   push:
     branches: [main]
     paths:
       - "download_latest_pdf.py"
       - "uke_speiseplan.py"
       - "index.html"
-      - "styles.css"
-      - "app.js"
-      - "manifest.webmanifest"
-      - "service-worker.js"
+      - "src/**"
+      - "public/**"
+      - "package.json"
+      - "package-lock.json"
+      - "vite.config.js"
       - "requirements.txt"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -47,13 +48,18 @@ jobs:
         run: python download_latest_pdf.py -o _work/speiseplan.pdf
 
       - name: PDF auslesen
-        run: python uke_speiseplan.py _work/speiseplan.pdf -o data/speiseplan.json
+        run: python uke_speiseplan.py _work/speiseplan.pdf -o public/data/speiseplan.json
 
-      - name: Webseite zusammenstellen
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Vue-Anwendung bauen
         run: |
-          mkdir -p _site/data
-          cp index.html styles.css app.js manifest.webmanifest service-worker.js _site/
-          cp data/speiseplan.json _site/data/
+          npm ci
+          npm run build
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v5
@@ -61,7 +67,7 @@ jobs:
       - name: Seitenpaket hochladen
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
   deploy:
     environment:
