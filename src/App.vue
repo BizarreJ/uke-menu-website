@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from "vue";
 import DayPicker from "./components/DayPicker.vue";
 import MenuCard from "./components/MenuCard.vue";
+import BalanceTracker from "./components/BalanceTracker.vue";
 
 const filters = [
   { id: "alle", label: "Alle" },
@@ -18,6 +19,7 @@ const activeFilter = ref(validFilter);
 const loading = ref(true);
 const error = ref("");
 const toast = ref("");
+const activePage = ref(location.hash === "#guthaben" ? "guthaben" : "speiseplan");
 let toastTimer;
 
 const dates = computed(() => menuData.value ? Object.keys(menuData.value.tage) : []);
@@ -59,6 +61,12 @@ function showToast(message) {
   toastTimer = setTimeout(() => { toast.value = ""; }, 2200);
 }
 
+function selectPage(page) {
+  activePage.value = page;
+  history.replaceState(null, "", page === "guthaben" ? "#guthaben" : location.pathname + location.search);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 onMounted(async () => {
   try {
     const response = await fetch(`${import.meta.env.BASE_URL}data/speiseplan.json`, {
@@ -92,7 +100,16 @@ onMounted(async () => {
       </div>
     </header>
 
-    <main>
+    <nav class="page-nav" aria-label="Hauptnavigation">
+      <button type="button" :class="{ active: activePage === 'speiseplan' }" @click="selectPage('speiseplan')">
+        Speiseplan
+      </button>
+      <button type="button" :class="{ active: activePage === 'guthaben' }" @click="selectPage('guthaben')">
+        Guthaben
+      </button>
+    </nav>
+
+    <main v-if="activePage === 'speiseplan'">
       <section class="controls" aria-label="Speiseplan auswählen">
         <DayPicker
           v-if="dates.length"
@@ -144,6 +161,10 @@ onMounted(async () => {
           />
         </div>
       </section>
+    </main>
+
+    <main v-else>
+      <BalanceTracker :menu-data="menuData" @notice="showToast" />
     </main>
 
     <Transition name="toast">
