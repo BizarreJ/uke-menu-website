@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository laden
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Python einrichten
         uses: actions/setup-python@v5
@@ -65,7 +65,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Seitenpaket hochladen
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
@@ -78,4 +78,4 @@ jobs:
     steps:
       - name: GitHub Pages veröffentlichen
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
