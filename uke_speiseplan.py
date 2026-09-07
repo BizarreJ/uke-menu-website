@@ -86,23 +86,33 @@ VEGETARIAN_WORDS = (
 
 
 def parse_start_date(title: str) -> date:
-    """Liest das erste Datum aus z. B. 'vom 31. August bis ... 2026'."""
-    match = re.search(
-        r"vom\s+(\d{1,2})\.\s+([A-Za-zÄÖÜäöü]+).*?(\d{4})", title, re.I
-    )
-    if not match:
+    """Liest den Beginn aus Zeiträumen mit genanntem oder gemeinsamem Monat.
+
+    Unterstützt zum Beispiel sowohl ``vom 31. August bis 4. September 2026``
+    als auch ``vom 7. bis 11. September 2026``.
+    """
+    period = re.search(r"vom\s+(\d{1,2})\.\s+(.*?)\s+(\d{4})", title, re.I)
+    if not period:
         raise ValueError("Zeitraum im PDF-Titel nicht erkannt.")
-    day, month_name, year = match.groups()
+
+    day, between, year = period.groups()
+    words = re.findall(r"[A-Za-zÄÖÜäöü]+", between)
+    month_name = next(
+        (word for word in words if word.casefold() in MONTHS),
+        None,
+    )
+    if month_name is None:
+        raise ValueError("Monatsname im PDF-Zeitraum nicht erkannt.")
     month = MONTHS.get(month_name.casefold())
-    if month is None:
-        raise ValueError(f"Unbekannter Monatsname: {month_name}")
     return date(int(year), month, int(day))
 
 
 def clean_cell(text: str) -> dict[str, object]:
     """Trennt Gericht, Preise, Allergene und kcal einer Tabellenzelle."""
     text = re.sub(r"\s+", " ", text).strip()
-    kcal_match = re.search(r"Nährwert:\s*ca\.\s*(\d+)\s*Kcal", text, re.I)
+    # Die Reihenfolge wurde in neueren Plänen geändert: Allergencodes können
+    # nun zwischen "Nährwert:" und "ca. ... Kcal" stehen.
+    kcal_match = re.search(r"ca\.\s*(\d+)\s*Kcal", text, re.I)
     price_matches = list(re.finditer(r"(\d+,\d{2})\s*€", text))
     if not kcal_match or len(price_matches) < 2:
         raise ValueError(f"Zelle konnte nicht vollständig gelesen werden: {text!r}")
@@ -114,7 +124,15 @@ def clean_cell(text: str) -> dict[str, object]:
     title = parts[0] if parts else food
 
     metadata = text[price_matches[1].end() : kcal_match.start()]
-    allergen_match = re.search(r"enthält:?\s*([A-Z](?:\s*,\s*[A-Z])*)", metadata, re.I)
+    allergen_match = re.search(
+        r"enthält:?\s*(?:Nährwert:?\s*)?([A-N](?:\s*,\s*[A-N])*)",
+        metadata,
+    )
+    if not allergen_match:
+        allergen_match = re.search(
+            r"Nährwert:?\s*([A-N](?:\s*,\s*[A-N])*)",
+            metadata,
+        )
     allergens = []
     if allergen_match:
         allergens = [x.strip().upper() for x in allergen_match.group(1).split(",")]
