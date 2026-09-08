@@ -83,6 +83,7 @@ VEGETARIAN_WORDS = (
     "käse", "mozzarella", "hirtenkäse", "grana padano", "sauerrahm",
     "spinatknödel", "ei ",
 )
+VEGAN_WORDS = ("soja gemüsesud",)
 
 
 def parse_start_date(title: str) -> date:
@@ -219,6 +220,9 @@ def classify_food(description: str, icons: set[str]) -> dict[str, object]:
         proteins.clear()
         if "vegan" in text:
             sources.add("text")
+    elif not proteins and any(word in text for word in VEGAN_WORDS):
+        form = "vegan"
+        sources.add("text")
     elif "vegetarisch" in icons:
         form = "vegetarisch"
     elif proteins:
