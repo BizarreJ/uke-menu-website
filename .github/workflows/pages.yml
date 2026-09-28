@@ -3,7 +3,7 @@ name: Speiseplan aktualisieren und veröffentlichen
 on:
   schedule:
     # Jeden Montag 05:17 UTC (06:17 MEZ / 07:17 MESZ).
-    - cron: "17 5 * * 1"
+    - cron: "17 3 * * 1"
   push:
     branches: [main]
     paths:
