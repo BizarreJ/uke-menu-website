@@ -92,7 +92,7 @@ def parse_start_date(title: str) -> date:
     Unterstützt zum Beispiel sowohl ``vom 31. August bis 4. September 2026``
     als auch ``vom 7. bis 11. September 2026``.
     """
-    period = re.search(r"vom\s+(\d{1,2})\.\s+(.*?)\s+(\d{4})", title, re.I)
+    period = re.search(r"vom\s+(\d{1,2})\.\s*(.*?)\s+(\d{4})", title, re.I)
     if not period:
         raise ValueError("Zeitraum im PDF-Titel nicht erkannt.")
 
