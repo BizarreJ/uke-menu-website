@@ -83,7 +83,11 @@ VEGETARIAN_WORDS = (
     "käse", "mozzarella", "hirtenkäse", "grana padano", "sauerrahm",
     "spinatknödel", "ei ",
 )
-VEGAN_WORDS = ("soja gemüsesud",)
+VEGAN_WORDS = (
+    # Rückfallregel für Gerichte, deren veganes Symbol als nicht direkt
+    # dekodierbares PDF-Bild eingebettet ist.
+    "soja gemüsesud",
+)
 
 
 def parse_start_date(title: str) -> date:
