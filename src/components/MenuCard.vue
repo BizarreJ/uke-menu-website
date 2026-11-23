@@ -40,6 +40,7 @@ const allergens = computed(() => props.meal.allergene?.length
   : "keine Angabe");
 
 function formatPrice(value) {
+  if (value == null) return "keine Angabe";
   return new Intl.NumberFormat("de-DE", {
     style: "currency",
     currency: "EUR",
