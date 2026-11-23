@@ -83,11 +83,7 @@ VEGETARIAN_WORDS = (
     "käse", "mozzarella", "hirtenkäse", "grana padano", "sauerrahm",
     "spinatknödel", "ei ",
 )
-VEGAN_WORDS = (
-    # Rückfallregel für Gerichte, deren veganes Symbol als nicht direkt
-    # dekodierbares PDF-Bild eingebettet ist.
-    "soja gemüsesud",
-)
+VEGAN_WORDS = ("soja gemüsesud",)
 
 
 def parse_start_date(title: str) -> date:
@@ -118,8 +114,12 @@ def clean_cell(text: str) -> dict[str, object]:
     # Die Reihenfolge wurde in neueren Plänen geändert: Allergencodes können
     # nun zwischen "Nährwert:" und "ca. ... Kcal" stehen.
     kcal_match = re.search(r"ca\.\s*(\d+)\s*Kcal", text, re.I)
-    price_matches = list(re.finditer(r"(\d+,\d{2})\s*€", text))
-    if not kcal_match or len(price_matches) < 2:
+    metadata_start = re.search(r"\b(?:Zusatzstoffe|enthält|Nährwert)\b", text, re.I)
+    price_area = text[: metadata_start.start()] if metadata_start else text[: kcal_match.start()]
+    # Am rechten Rand einer Tageszelle kann das Eurozeichen außerhalb des
+    # Ausschnitts liegen, obwohl der vollständige Zahlenwert enthalten ist.
+    price_matches = list(re.finditer(r"(\d+,\d{2})(?:\s*€)?", price_area))
+    if not kcal_match or not price_matches:
         raise ValueError(f"Zelle konnte nicht vollständig gelesen werden: {text!r}")
 
     food = text[: price_matches[0].start()].strip(" €/")
@@ -128,7 +128,7 @@ def clean_cell(text: str) -> dict[str, object]:
     parts = [part.strip() for part in food.split("/") if part.strip()]
     title = parts[0] if parts else food
 
-    metadata = text[price_matches[1].end() : kcal_match.start()]
+    metadata = text[price_matches[-1].end() : kcal_match.start()]
     allergen_match = re.search(
         r"enthält:?\s*(?:Nährwert:?\s*)?([A-N](?:\s*,\s*[A-N])*)",
         metadata,
@@ -147,7 +147,11 @@ def clean_cell(text: str) -> dict[str, object]:
         "beschreibung": food,
         "kcal": int(kcal_match.group(1)),
         "preis_intern_eur": float(price_matches[0].group(1).replace(",", ".")),
-        "preis_extern_eur": float(price_matches[1].group(1).replace(",", ".")),
+        "preis_extern_eur": (
+            float(price_matches[1].group(1).replace(",", "."))
+            if len(price_matches) > 1
+            else None
+        ),
         "allergene": allergens,
         "yazio_text": f"{food}. Portion laut UKE-Casino ca. {kcal_match.group(1)} kcal.",
     }
